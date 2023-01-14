@@ -1,22 +1,17 @@
-function Maincontent(){
-    return (<h1>We did it!!</h1>);
-}
-function Decl(){
-    return (<h1 className="header">This is the declarative way</h1>);
-}
-
-const items = (
+const page = (
     <div>
-        <Maincontent />
-        <Decl />
+        <img src="./react-logo.png" width="40px" alt="react logo"/>
+        <h1>Fun facts about React</h1>
+        <ul>
+            <li>Was first released in 2013</li>
+            <li>Was originally created by Jordan Walke</li>
+            <li>Has well over 100k stars on Github</li>
+            <li>Is maintained by Facebook</li>
+            <li>Powers thousands of enterprise apps, including mobile apps</li>
+        </ul>
     </div>
 )
-ReactDOM.render(
-    items,
-    document.getElementById("root")
-)
 
-const h1 = document.createElement("h1");
-h1.textContent = "This is an imperative way";
-h1.className = "header";
-document.getElementById("root").append(h1);
+ReactDOM.render(page, document.getElementById("root"))
+
+
